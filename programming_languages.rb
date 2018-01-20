@@ -3,6 +3,7 @@ def reformat_languages(languages)
   languages.each do |style,language_family|
     language_family.each do |language,type|
       new_hash[language] = type 
+      if new_hash[language][:style] == nil 
       new_hash[language][:style] = [].push(style)
     end
   end
