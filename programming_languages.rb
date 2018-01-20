@@ -1,3 +1,5 @@
+require 'pry'
+
 def reformat_languages(languages)
   new_hash = {}
   languages.each do |style,language_family|
@@ -6,7 +8,9 @@ def reformat_languages(languages)
       if new_hash[language][:style].nil? 
         new_hash[language][:style] = [style]
       else 
-        new_hash[language][:style].push(style) 
+        binding.pry
+        new_hash[language][:style].push(style)
+        binding.pry
       end
     end
   end
