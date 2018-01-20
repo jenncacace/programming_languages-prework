@@ -6,7 +6,7 @@ def reformat_languages(languages)
       if new_hash[language][:style].nil? 
         new_hash[language][:style] = [style]
       else 
-        new_hash[language][:style] << style 
+        new_hash[language][:style].push(style) 
       end
     end
   end
